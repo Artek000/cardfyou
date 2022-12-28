@@ -1,4 +1,4 @@
-function Nav_link(props) {
+function NavLink(props) {
     return(
         <div className="nav-link">
             <a href={props.href} title={props.name}>
@@ -10,4 +10,4 @@ function Nav_link(props) {
     );
 }
 
-export default Nav_link;
+export default NavLink;

@@ -1,6 +1,6 @@
 import logo from '../logo.svg';
 import '../css/header.css';
-import Nav_panel from "./nav_panel";
+import NavPanel from "./navPanel";
 function Header() {
     return(
         <div className="header">
@@ -9,7 +9,7 @@ function Header() {
                     <a href="/" className="header_logo">
                         <img src={logo} alt="Логотип"/>
                     </a>
-                    <Nav_panel></Nav_panel>
+                    <NavPanel></NavPanel>
                 </div>
             </div>
         </div>
