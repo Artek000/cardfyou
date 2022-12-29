@@ -1,9 +1,13 @@
 import './css/App.css';
 import Header from "./components/header";
+import BigInfo from "./components/bigInfo";
 
 function App() {
   return (
-      <Header></Header>
+      <div>
+        <Header />
+        <BigInfo />
+      </div>
   );
 }
 

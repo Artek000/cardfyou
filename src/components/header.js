@@ -8,6 +8,7 @@ function Header() {
                 <div className="header_content container">
                     <a href="/" className="header_logo">
                         <img src={logo} alt="Логотип"/>
+                        <span>CardFYou</span>
                     </a>
                     <NavPanel></NavPanel>
                 </div>
