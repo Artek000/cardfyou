@@ -4,13 +4,11 @@ body{
     font-weight: 300;
     font-family: 'Favorit', "sans-serif";
     -webkit-font-smoothing: antialiased;
+    background-color: #222629;
+    color: #fffffd;
 }
 a{
     text-decoration: none;
-    color: initial;
-}
-a:hover{
-    color: initial;
 }
 
 @font-face {
@@ -28,7 +26,7 @@ a:hover{
 }
 .big-info_panel{
     display: flex;
-    background-color: wheat;
+    /*background-color: #6a6e71;*/
     border-radius: 0 0 24px 24px;
     padding: 80px 0;
 }
@@ -36,6 +34,9 @@ a:hover{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.big-info_left picture img{
+    padding-right: 30px;
 }
 .title-block{
     text-align: left;
@@ -69,15 +70,24 @@ a:hover{
 .puzzle-item{
     position: relative;
     border-radius: 22px;
-    background-color: #fff;
+    background-color: #87c232;
     padding: 20px 20px 7px;
     display: flex;
     flex-direction: column;
-    border: 1px solid #fff;
     color: unset;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
 }
 .puzzle-item:hover{
-    background-color: transparent;
+    color: #fffffd;
+    animation-name: bounce;
+    animation-timing-function: ease;
+}
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
 }
 .puzzle-item h3{
     font-size: 22px;
@@ -87,7 +97,7 @@ a:hover{
 .puzzle-item p{
     font-size: 13px;
     font-weight: 300;
-    color: #9394a1;
+    color: #fffffd;
     line-height: 1.4;
 }
 .puzzle-item svg{

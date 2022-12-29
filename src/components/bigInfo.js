@@ -11,8 +11,7 @@ function BigInfo() {
                             <span>но не сдесь</span>
                         </h2>
                         <picture>
-                            <source srcSet={'/img/big_info.jpg'}/>
-                            <img srcSet={'/img/big_info.jpg'}/>
+                            <img srcSet={'/img/big_info.png'} alt=""/>
                         </picture>
                     </div>
                     <div className="big-info-puzzle">

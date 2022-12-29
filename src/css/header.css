@@ -3,8 +3,8 @@
     padding: 10px 10px 0;
 }
 .header_wrapper{
-    border-radius: 24px 24px 0 0;
-    background-color: wheat;
+    border-radius: 24px;
+    background-color: #6a6e71;
 }
 .header_content{
     position: relative;
@@ -25,6 +25,10 @@
     width: 100%;
     flex: 1 0 auto;
     display: contents;
+    color: #fffffd;
+}
+.header_logo:hover{
+    color: #fffffd;
 }
 .header_logo span{
     font-size: 24px;
@@ -43,4 +47,7 @@
     margin-right: 50px;
     position: relative;
     cursor: pointer;
+}
+.nav-link a{
+    color: #fffffd;
 }
