@@ -7,7 +7,8 @@ function BigInfo() {
                 <div className="big-info_content container">
                     <div className="big-info_left">
                         <h2 className="title-block">
-                            Мечты сбываются, но не сдесь
+                            Мечты сбываются,
+                            <span>но не сдесь</span>
                         </h2>
                         <picture>
                             <source srcSet={'/img/big_info.jpg'}/>

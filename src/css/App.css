@@ -12,12 +12,6 @@ a{
 a:hover{
     color: initial;
 }
-img{
-    border-radius: 24px;
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
 
 @font-face {
     font-family: 'Favorit';
@@ -51,6 +45,10 @@ img{
     font-weight: 300;
     display: flex;
     flex-direction: column;
+}
+.title-block span{
+    /*font-family: Antonym,"sans-serif";*/
+    font-weight: 200;
 }
 .big-info_content{
     display: flex;
@@ -116,11 +114,61 @@ img{
 }
 
 @media (min-width: 1280px) {
+    .burger {
+        display: none !important;
+    }
     .puzzle-item:nth-child(1), .puzzle-item:nth-child(2), .puzzle-item:nth-child(3) {
         width: 230px;
         height: 220px;
     }
     .puzzle-item:nth-child(4), .puzzle-item:nth-child(5) {
         height: 220px;
+    }
+}
+@media (max-width: 1279px){
+    .header_logo{
+        left: 24px;
+    }
+    .nav-panel {
+        padding-left: 50px;
+    }
+    .big-info_content{
+        max-width: 100%;
+        padding: 0 40px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+    .title-block {
+        margin-bottom: 2rem;
+    }
+    .big-info_left {
+        justify-content: flex-end;
+    }
+    .big-info_panel {
+        padding-top: 3rem;
+    }
+    .big-info-puzzle {
+        margin-left: auto;
+        width: auto;
+        grid-gap: 1.25rem;
+        grid-template-columns: 10.3125rem 10.3125rem;
+        grid-auto-rows: 10.3125rem;
+        grid-template-areas: "item1 item2" "item3 item4" "item5 item5";
+    }
+    .puzzle-item {
+        padding-top: 1.125rem;
+        padding-left: .9375rem;
+        padding-right: .9375rem;
+    }
+    .puzzle-item h3 {
+        margin-bottom: .125rem;
+        font-size: 18px;
+    }
+    .puzzle-item p {
+        font-size: 10px;
+    }
+    .puzzle-item svg {
+        margin-right: -10px;
+        margin-bottom: 0;
     }
 }
