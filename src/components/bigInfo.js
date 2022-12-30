@@ -7,8 +7,8 @@ function BigInfo() {
                 <div className="big-info_content container">
                     <div className="big-info_left">
                         <h2 className="title-block">
-                            Мечты сбываются,
-                            <span>но не сдесь</span>
+                            Карта для каждого
+                            <span>без скрытых смыслов</span>
                         </h2>
                         <picture>
                             <img srcSet={'/img/big_info.png'} alt=""/>
