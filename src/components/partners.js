@@ -17,7 +17,7 @@ function Partners() {
                             <img src="/img/partners/gerb.svg" alt=""/>
                             <span>
                             Все банки и МФО с лицензией ЦБ
-                        </span>
+                            </span>
                         </p>
                     </div>
                     <div className="partners_items">
