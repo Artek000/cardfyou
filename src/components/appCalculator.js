@@ -1,11 +1,13 @@
 import ReactSlider from "react-slider";
-import { useState } from "react";
+import {useState} from "react";
 
 function AppCalculator() {
     const [money, setMoney] = useState(140000);
+
     function onChangeMoney(moneyIn) {
         setMoney(moneyIn);
     }
+
     return(
         <div className="calculator_app_content">
             <div className="calculator_tabs">
@@ -18,7 +20,7 @@ function AppCalculator() {
                         <div className="input_block" id="creditHeaderParamMoney">
                             <div className="input_slider">
                                 <span className="input_slider_title">Мне нужно</span>
-                                <input itemID="iNeedSum" value={money} onChange={e => onChangeMoney(Number(e.target.value))} />
+                                <input itemID="iNeedSum" value={money} onChange={e => onChangeMoney(Number(e.target.value))}/>
                                 <span className="input_slider_cur">
                                     <span>₽</span>
                                 </span>

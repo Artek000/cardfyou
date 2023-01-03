@@ -168,10 +168,6 @@
     background-color: #000;
 }
 
-#staticLine {
-    width: 0;
-}
-
 .input_slider_track:first-child {
     height: 2px;
     background-color: #87c232;

@@ -1,5 +1,7 @@
+import '../css/partners.css';
+
 function Partners() {
-    return (
+    return(
         <div className="partners">
             <div className="partners_container">
                 <h1 className="partners_container_title">
