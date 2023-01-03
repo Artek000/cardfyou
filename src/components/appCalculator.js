@@ -1,34 +1,11 @@
-import $ from 'jquery';
-import 'jquery-ui/ui/widgets/slider';
+import ReactSlider from "react-slider";
+import { useState } from "react";
 
 function AppCalculator() {
-    $(window).on("load", function () {
-        $( "" ).slider({
-            animate: "slow",
-            range: "min",
-            value: 5000,
-            min: 500,
-            max: 30000,
-            step: 500,
-            slide: function (event, ui) {
-                $("#iNeedSum").val(ui.value);
-            }
-        });
-        $("").val($("").slider("value"));
-
-        $( ".input_slider_slider" ).slider({
-            animate: "slow",
-            range: "min",
-            value: 160000,
-            min: 100000,
-            max: 1000000,
-            step: 20000,
-            slide: function (event, ui) {
-                $("#iNeedSum").val(ui.value);
-            }
-        });
-        $("#iNeedSum").val($(".input_slider_slider").slider("value"));
-    });
+    const [money, setMoney] = useState(140000);
+    function onChangeMoney(moneyIn) {
+        setMoney(moneyIn);
+    }
     return(
         <div className="calculator_app_content">
             <div className="calculator_tabs">
@@ -41,15 +18,22 @@ function AppCalculator() {
                         <div className="input_block" id="creditHeaderParamMoney">
                             <div className="input_slider">
                                 <span className="input_slider_title">Мне нужно</span>
-                                <input id="iNeedSum" />
+                                <input itemID="iNeedSum" value={money} onChange={e => onChangeMoney(Number(e.target.value))} />
                                 <span className="input_slider_cur">
                                     <span>₽</span>
                                 </span>
                             </div>
-                            <div className="input_slider_slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" data-slider="">
-                                <div className="ui-slider-range ui-slider-range-min" id="staticLine"></div>
-                                <span tabIndex="0" className="ui-slider-handle input_slider_dot ui-state-default"></span>
-                            </div>
+                            <ReactSlider
+                                className={"input_slider_slider"}
+                                thumbClassName={"input_slider_dot"}
+                                trackClassName={"input_slider_track"}
+                                min={100000}
+                                max={1000000}
+                                value={money}
+                                step={20000}
+                                onChange={value => onChangeMoney(value)}
+                            />
+
                         </div>
                     </div>
                     <div className="calculator_value"></div>

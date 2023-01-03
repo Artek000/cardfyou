@@ -162,6 +162,7 @@
 .input_slider_slider {
     position: absolute;
     bottom: 0;
+    width: calc(100% - 32px);
     left: 18px;
     right: 18px;
     background-color: #000;
@@ -171,7 +172,7 @@
     width: 0;
 }
 
-.ui-slider-range {
+.input_slider_track:first-child {
     height: 2px;
     background-color: #87c232;
     position: absolute;
@@ -181,7 +182,7 @@
     z-index: 1;
 }
 
-.ui-slider-range:before {
+.input_slider_track:first-child:before {
     display: block;
     content: "";
     width: 4px;
@@ -195,7 +196,6 @@
 }
 
 .input_slider_dot {
-    margin-left: -12px;
     width: 24px;
     height: 24px;
     border-radius: 50%;
