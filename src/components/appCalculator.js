@@ -1,11 +1,24 @@
 import ReactSlider from "react-slider";
 import {useState} from "react";
+import CurrencyInput from 'react-currency-input-field';
 
 function AppCalculator() {
-    const [money, setMoney] = useState(140000);
+    const [money, setMoney] = useState(160000);
 
     function onChangeMoney(moneyIn) {
-        setMoney(moneyIn);
+         if(!isNaN(moneyIn)){
+            setMoney(moneyIn);
+         }else {
+             setMoney(0);
+         }
+    }
+
+    function validCardMoney(){
+        if(money < 100000){
+            setMoney(100000);
+        }else if (money > 1000000){
+            setMoney(1000000);
+        }
     }
 
     return(
@@ -20,7 +33,14 @@ function AppCalculator() {
                         <div className="input_block" id="creditHeaderParamMoney">
                             <div className="input_slider">
                                 <span className="input_slider_title">Мне нужно</span>
-                                <input itemID="iNeedSum" value={money} onChange={e => onChangeMoney(Number(e.target.value))}/>
+                                <CurrencyInput id="iNeedSum"
+                                               value={money}
+                                               defaultValue={160000}
+                                               allowDecimals={false}
+                                               allowNegativeValue={false}
+                                               onBlur={(e) => validCardMoney()}
+                                               onValueChange={value => onChangeMoney(Number(value))}
+                                />
                                 <span className="input_slider_cur">
                                     <span>₽</span>
                                 </span>
