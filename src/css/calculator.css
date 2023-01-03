@@ -5,10 +5,11 @@
 
 .calculator_content {
     margin-top: 0;
-    padding-top: 16px;
+    padding-top: 40px;
     background-color: #474a4f;
     margin-bottom: 16px;
     border-radius: 24px;
+    max-width: 1400px;
 }
 
 .calculator_title {
@@ -32,7 +33,7 @@
 
 .calculator_app_content {
     padding-top: 32px;
-    padding-bottom: 80px;
+    padding-bottom: 40px;
     max-width: 1100px;
     width: 100%;
     margin: 0 auto;
@@ -68,7 +69,7 @@
 }
 
 .calculator_credit,
-.calculator_vklad {
+.calculator_zaim {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
@@ -86,8 +87,10 @@
 
 .calculator_big_value {
     width: 100%;
-    padding: 40px 48px;
-    background-color: #fff;
+    padding: 20px 0;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    /*background-color: #fff;*/
 }
 
 .calculator_value:nth-child(1),
@@ -118,7 +121,7 @@
     position: absolute;
     left: 16px;
     top: 8px;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 300;
     color: #9394a1;
     pointer-events: none;
@@ -150,13 +153,16 @@
     position: absolute;
     display: flex;
     align-items: center;
+    height: 100%;
     top: 50%;
     right: 16px;
     transform: translateY(-50%);
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 300;
     color: #9394a1;
-    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .input_slider_slider {
@@ -204,4 +210,55 @@
     cursor: pointer;
     z-index: 10;
     outline: none;
+}
+
+.calculator_big_decorator {
+    margin-bottom: 16px;
+    width: 50%;
+    height: 8px;
+    background-color: #fffffd;
+    position: relative;
+    border-radius: 12px;
+}
+
+.big_decorator {
+    position: absolute;
+    width: 70%;
+    left: 0;
+    background-color: #87c232;
+    height: 100%;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.big_btn {
+    max-width: 420px;
+    width: 100%;
+    flex: 1 0 auto;
+    height: 52px;
+    justify-content: center;
+    padding: 0;
+
+    background-color: #87c232;
+    color: #fffffd;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 300;
+    transition: all .3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.big_btn:hover {
+    transition: all .3s ease;
+    background-color: #6a6e71;
+    border: 2px solid #fffffd;
 }

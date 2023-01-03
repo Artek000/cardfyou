@@ -3,7 +3,7 @@ import '../css/partners.css';
 function Partners() {
     return(
         <div className="partners">
-            <div className="partners_container">
+            <div className="partners_container container">
                 <h1 className="partners_container_title">
                     Card For You – финансовый
                     <span> помощник.</span>

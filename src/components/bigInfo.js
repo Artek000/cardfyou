@@ -1,4 +1,5 @@
 import Puzzle from "./puzzle";
+import '../css/bigInfo.css';
 
 function BigInfo() {
     return(
@@ -15,9 +16,9 @@ function BigInfo() {
                         </picture>
                     </div>
                     <div className="big-info-puzzle">
-                        <Puzzle href={"/"} title={"Вклады"} about={"Хранить деньги и зарабатывать"}></Puzzle>
+                        {/*<Puzzle href={"/"} title={"Вклады"} about={"Хранить деньги и зарабатывать"}></Puzzle>*/}
                         <Puzzle href={"/"} title={"Займы"} about={"Получить деньги срочно, но выгодно"}></Puzzle>
-                        <Puzzle href={"/"} title={"Кредиты наличными"} about={"Получить нужную сумму на важную покупку"}></Puzzle>
+                        {/*<Puzzle href={"/"} title={"Кредиты наличными"} about={"Получить нужную сумму на важную покупку"}></Puzzle>*/}
                         <Puzzle href={"/"} title={"Кредитные карты"} about={"Не платить проценты более 100 дней"}></Puzzle>
                         <Puzzle href={"/"} title={"Дебетовые карты"} about={"Получать самый высокий кэшбэк"}></Puzzle>
                     </div>
