@@ -17,7 +17,7 @@
 }
 
 .big-info_left picture img {
-    padding-right: 30px;
+    /*padding-right: 30px;*/
 
 }
 
@@ -163,6 +163,10 @@
 }
 
 @media (max-width: 767px) {
+    .nav-panel{
+        display: none;
+    }
+
     .big-info_panel {
         padding: 0;
     }
@@ -187,11 +191,6 @@
         height: 100%;
     }
 
-    .big-info_left picture img {
-        position: absolute;
-        top: -15px;
-    }
-
     .title-block {
         line-height: 0.9;
         margin-bottom: 20px;
@@ -209,16 +208,17 @@
         grid-gap: 8px;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "item1 item2" "item3 item3";
-        padding: 0 7px 200px;
+        padding: 0 7px 0;
         /*background-image: url(/img/vector/cloud/cloud-mobile.svg);*/
         background-size: 100% auto;
         background-position: bottom;
         background-repeat: no-repeat;
-        grid-template-rows: 168px 168px 152px;
+        grid-template-rows: 168px 168px;
     }
 
     .puzzle-item {
         min-height: auto;
+        width: 100%;
         padding: 15px 15px 12px;
         border-radius: 12px;
     }
@@ -234,6 +234,12 @@
     .puzzle-item svg {
         margin-right: -10px;
         margin-bottom: -10px;
+    }
+}
+
+@media (max-width: 650px){
+    .big-info_left picture{
+        max-width: 50%;
     }
 }
 

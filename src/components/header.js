@@ -11,6 +11,7 @@ function Header() {
                         <span>CardFYou</span>
                     </a>
                     <NavPanel></NavPanel>
+                    <div className="burger"></div>
                 </div>
             </div>
         </div>

@@ -1,44 +1,77 @@
 import ReactSlider from "react-slider";
 import {useState} from "react";
 import CurrencyInput from 'react-currency-input-field';
-import Select from 'react-select';
 import {CSSTransition} from "react-transition-group";
 
 function AppCalculator() {
-    const [money, setMoney] = useState(160000);
-    const [days, setDays] = useState(90);
+    const [moneyCard, setMoneyCard] = useState(160000);
+    const [moneyZaim, setMoneyZaim] = useState(5000);
+    const [daysCard, setDaysCard] = useState(90);
+    const [daysZaim, setDaysZaim] = useState(30);
     const [showCard, setShowCard] = useState(true);
     const [showZaim, setShowZaim] = useState(false);
 
-    function onChangeMoney(moneyIn) {
+    function onChangeMoneyCard(moneyIn) {
         if (!isNaN(moneyIn)) {
-            setMoney(moneyIn);
+            setMoneyCard(moneyIn);
         } else {
-            setMoney(0);
+            setMoneyCard(0);
         }
     }
 
-    function onChangeDays(dayIn) {
-        if (!isNaN(dayIn)) {
-            setDays(dayIn);
+    function onChangeMoneyZaim(moneyIn) {
+        if (!isNaN(moneyIn)) {
+            setMoneyZaim(moneyIn);
         } else {
-            setDays(0);
+            setMoneyZaim(0);
+        }
+    }
+
+    function onChangeDaysCard(dayIn) {
+        if (!isNaN(dayIn)) {
+            setDaysCard(dayIn);
+        } else {
+            setDaysCard(0);
+        }
+    }
+
+    function onChangeDaysZaim(dayIn) {
+        if (!isNaN(dayIn)) {
+            setDaysZaim(dayIn);
+        } else {
+            setDaysZaim(0);
         }
     }
 
     function validCardMoney() {
-        if (money < 100000) {
-            setMoney(100000);
-        } else if (money > 1000000) {
-            setMoney(1000000);
+        if (moneyCard < 100000) {
+            setMoneyCard(100000);
+        } else if (moneyCard > 1000000) {
+            setMoneyCard(1000000);
+        }
+    }
+
+    function validZaimMoney() {
+        if (moneyZaim < 500) {
+            setMoneyZaim(500);
+        } else if (moneyZaim > 30000) {
+            setMoneyZaim(30000);
         }
     }
 
     function validCardDays() {
-        if (days < 55) {
-            setDays(55);
-        } else if (money > 365) {
-            setDays(365);
+        if (daysCard < 55) {
+            setDaysCard(55);
+        } else if (daysCard > 365) {
+            setDaysCard(365);
+        }
+    }
+
+    function validZaimDays() {
+        if (daysZaim < 7) {
+            setDaysZaim(7);
+        } else if (daysZaim > 365) {
+            setDaysZaim(365);
         }
     }
 
@@ -65,12 +98,12 @@ function AppCalculator() {
                             <div className="input_block">
                                 <div className="input_slider">
                                     <span className="input_slider_title">Мне нужно</span>
-                                    <CurrencyInput value={money}
+                                    <CurrencyInput value={moneyCard}
                                                    defaultValue={160000}
                                                    allowDecimals={false}
                                                    allowNegativeValue={false}
                                                    onBlur={(e) => validCardMoney()}
-                                                   onValueChange={value => onChangeMoney(Number(value))}
+                                                   onValueChange={value => onChangeMoneyCard(Number(value))}
                                     />
                                     <span className="input_slider_cur">
                                     <span>₽</span>
@@ -82,9 +115,9 @@ function AppCalculator() {
                                     trackClassName={"input_slider_track"}
                                     min={100000}
                                     max={1000000}
-                                    value={money}
+                                    value={moneyCard}
                                     step={20000}
-                                    onChange={value => onChangeMoney(value)}
+                                    onChange={value => onChangeMoneyCard(value)}
                                 />
                             </div>
                         </div>
@@ -92,12 +125,12 @@ function AppCalculator() {
                             <div className="input_block">
                                 <div className="input_slider">
                                     <span className="input_slider_title">Льготный период</span>
-                                    <CurrencyInput value={days}
+                                    <CurrencyInput value={daysCard}
                                                    defaultValue={90}
                                                    allowDecimals={false}
                                                    allowNegativeValue={false}
                                                    onBlur={(e) => validCardDays()}
-                                                   onValueChange={value => onChangeDays(Number(value))}
+                                                   onValueChange={value => onChangeDaysCard(Number(value))}
                                     />
                                     <span className="input_slider_cur">
                                     <span unselectable="on">Дней</span>
@@ -109,9 +142,9 @@ function AppCalculator() {
                                     trackClassName={"input_slider_track"}
                                     min={55}
                                     max={365}
-                                    value={days}
+                                    value={daysCard}
                                     step={5}
-                                    onChange={value => onChangeDays(value)}
+                                    onChange={value => onChangeDaysCard(value)}
                                 />
                             </div>
                         </div>
@@ -132,12 +165,12 @@ function AppCalculator() {
                             <div className="input_block">
                                 <div className="input_slider">
                                     <span className="input_slider_title">Мне нужно</span>
-                                    <CurrencyInput value={money}
-                                                   defaultValue={160000}
+                                    <CurrencyInput value={moneyZaim}
+                                                   defaultValue={5000}
                                                    allowDecimals={false}
                                                    allowNegativeValue={false}
-                                                   onBlur={(e) => validCardMoney()}
-                                                   onValueChange={value => onChangeMoney(Number(value))}
+                                                   onBlur={(e) => validZaimMoney()}
+                                                   onValueChange={value => onChangeMoneyZaim(Number(value))}
                                     />
                                     <span className="input_slider_cur">
                                     <span>₽</span>
@@ -147,24 +180,24 @@ function AppCalculator() {
                                     className={"input_slider_slider"}
                                     thumbClassName={"input_slider_dot"}
                                     trackClassName={"input_slider_track"}
-                                    min={100000}
-                                    max={1000000}
-                                    value={money}
-                                    step={20000}
-                                    onChange={value => onChangeMoney(value)}
+                                    min={500}
+                                    max={30000}
+                                    value={moneyZaim}
+                                    step={500}
+                                    onChange={value => onChangeMoneyZaim(value)}
                                 />
                             </div>
                         </div>
                         <div className="calculator_value">
                             <div className="input_block">
                                 <div className="input_slider">
-                                    <span className="input_slider_title">Льготный период</span>
-                                    <CurrencyInput value={days}
-                                                   defaultValue={90}
+                                    <span className="input_slider_title">На срок</span>
+                                    <CurrencyInput value={daysZaim}
+                                                   defaultValue={30}
                                                    allowDecimals={false}
                                                    allowNegativeValue={false}
-                                                   onBlur={(e) => validCardDays()}
-                                                   onValueChange={value => onChangeDays(Number(value))}
+                                                   onBlur={(e) => validZaimDays()}
+                                                   onValueChange={value => onChangeDaysZaim(Number(value))}
                                     />
                                     <span className="input_slider_cur">
                                     <span unselectable="on">Дней</span>
@@ -174,11 +207,11 @@ function AppCalculator() {
                                     className={"input_slider_slider"}
                                     thumbClassName={"input_slider_dot"}
                                     trackClassName={"input_slider_track"}
-                                    min={55}
+                                    min={7}
                                     max={365}
-                                    value={days}
-                                    step={5}
-                                    onChange={value => onChangeDays(value)}
+                                    value={daysZaim}
+                                    step={1}
+                                    onChange={value => onChangeDaysZaim(value)}
                                 />
                             </div>
                         </div>
