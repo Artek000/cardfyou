@@ -1,0 +1,181 @@
+.offers {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: -200px;
+}
+
+.offers_wrapper {
+    padding: 80px 0;
+    border-radius: 24px;
+    background-image: url(https://zefir.ru/img/vector/cloud/cloud1.svg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 1280px auto;
+}
+
+.offers_inner {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 135px;
+}
+.offers_title {
+    text-align: left;
+    align-items: flex-start;
+    width: 100%;
+    display: block;
+}
+.offers_picture {
+    position: relative;
+    background-color: #474a4f;
+    border-radius: 57px;
+}
+.offers_items {
+    display: grid;
+    grid-template-columns: 354px 354px;
+    grid-gap: 16px;
+    margin: auto;
+}
+.offers_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 163px;
+    border-radius: 16px;
+    background-color: #87c232;
+    padding: 30px;
+}
+.offers_item span {
+    font-size: 56px;
+    font-weight: 300;
+}
+.offers_item p {
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.offers_item:nth-child(2) p {
+    font-size: 28px;
+    font-weight: 300;
+    text-transform: none;
+    text-align: center;
+    line-height: 1.2;
+}
+.free_service_inner {
+    display: flex;
+    margin-bottom: 120px;
+}
+.free_service_col {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.free_service_title {
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 10px;
+    color: #222629;
+}
+.free_service_subtitle {
+    font-size: 22px;
+    font-weight: 300;
+    color: #9394a1;
+}
+.free_service_col button {
+    justify-content: center;
+    padding: 0;
+    height: 52px;
+    max-width: 220px;
+    width: 100%;
+    margin-top: 48px;
+    border-radius: 60px;
+}
+.free_service_col:last-child {
+    margin-left: auto;
+}
+
+@media (min-width: 1280px) {
+    .offers {
+        margin-bottom: 1.9375rem;
+    }
+    .offers_wrapper {
+        background-size: 100% 36.125rem!important;
+        background-position: center bottom -15%;
+    }
+    .offers_title {
+        margin-bottom: 3.1875rem!important;
+    }
+    .offers_items {
+        margin-top: .75rem;
+        margin-right: 0;
+    }
+    .free_service_inner {
+        margin-bottom: 0;
+        padding-top: .5625rem;
+    }
+    .free_service_title {
+        margin-bottom: 1.375rem;
+    }
+    .free_service_col button {
+        margin-top: 2.75rem;
+        font-size: 1rem!important;
+        font-weight: 500;
+    }
+    .free_service_col:last-child {
+        margin-right: 5.625rem!important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    .offers {
+        margin-bottom: 1.9375rem;
+    }
+    .offers_wrapper {
+        padding-bottom: 1.9375rem;
+        background-position: center bottom;
+        background-image: url(https://zefir.ru/img/vector/cloud/cloud3.svg);
+        background-size: 100% 404px;
+    }
+    .offers_container {
+        max-width: 940px;
+    }
+    .offers_inner {
+        padding-bottom: 6.5625rem;
+        flex-direction: column;
+    }
+    .offers_title {
+        width: 25rem;
+        margin: .5625rem auto 2.6875rem;
+        text-align: center;
+        align-items: center;
+        order: 1;
+    }
+    .offers_picture {
+        width: 11.875rem;
+        margin: 0 auto;
+        border-radius: 28px;
+    }
+    .offers_items {
+        order: 2;
+    }
+    .free_service_inner {
+        margin-bottom: 0;
+    }
+    .free_service_title {
+        margin-bottom: 1.1875rem;
+        font-size: 3rem;
+        line-height: 100%;
+    }
+    .free_service_subtitle {
+        font-size: 1rem;
+        line-height: 140%;
+    }
+    .free_service_col:last-child {
+        margin-right: 1.625rem;
+        margin-bottom: 1.75rem;
+    }
+    .free_service_pic {
+        width: 16.0625rem;
+    }
+}

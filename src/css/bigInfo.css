@@ -142,7 +142,7 @@
 
 @media (min-width: 1280px) {
     .puzzle-item:nth-child(1), .puzzle-item:nth-child(2), .puzzle-item:nth-child(3) {
-        width: 230px;
+        width: 100%;
         height: 220px;
     }
 
@@ -159,6 +159,9 @@
     .big-info_content {
         max-width: 100%;
         padding: 0 40px;
+    }
+    .big-info_left picture {
+        max-width: 450px;
     }
 }
 

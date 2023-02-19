@@ -3,6 +3,7 @@ import Header from "./components/header";
 import BigInfo from "./components/bigInfo";
 import Calculator from "./components/calculator";
 import Partners from "./components/partners";
+import Offers from "./components/offers";
 
 function App() {
     return(
@@ -11,6 +12,7 @@ function App() {
             <BigInfo/>
             <Partners/>
             <Calculator/>
+            <Offers/>
         </div>
     );
 }

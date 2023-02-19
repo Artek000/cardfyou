@@ -29,6 +29,23 @@ a {
     box-sizing: border-box;
 }
 
+.title_inner {
+    text-align: center;
+    font-size: 56px;
+    line-height: 1;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    font-family: 'Favorit', "sans-serif";
+    align-items: center;
+}
+
+.title_inner span {
+    /*font-family: Antonym,"sans-serif";*/
+    font-weight: 200;
+}
+
 @media (min-width: 1280px) {
 
 }
