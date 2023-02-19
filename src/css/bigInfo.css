@@ -161,7 +161,8 @@
         padding: 0 40px;
     }
     .big-info_left picture {
-        max-width: 450px;
+        max-width: 400px;
+        min-width: 100px;
     }
 }
 
@@ -183,6 +184,7 @@
         flex-direction: row;
         padding: 0 7px 0 10px;
         margin-bottom: -2px;
+        max-height: 250px;
     }
 
     .big-info_left picture {
@@ -192,6 +194,14 @@
         min-height: 200px;
         width: 100%;
         height: 100%;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .big-info_left > picture > img {
+        max-height: 80%;
     }
 
     .title-block {

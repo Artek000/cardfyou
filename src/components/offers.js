@@ -6,7 +6,7 @@ function Offers() {
             <div className={"offers_wrapper"}>
                 <div className={"offers_container container"}>
                     <div className={"offers_inner"}>
-                        <h2 className="title_inner offers_title">Что предлагает сервис?</h2>
+                        <h2 className="title_inner offers_title">Что предлагает <span>сервис</span>?</h2>
                         <div className="offers_picture">
                             <img src="https://zefir.ru/img/vector/structure.svg" alt={"Логотип"}/>
                         </div>

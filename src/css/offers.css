@@ -91,6 +91,12 @@
     margin-top: 48px;
     border-radius: 60px;
 }
+.free_service_col button:hover {
+    transition: all .3s ease;
+    background-color: #fff;
+    border: 1px solid #222629;
+    color: #222629;
+}
 .free_service_col:last-child {
     margin-left: auto;
 }
@@ -177,5 +183,104 @@
     }
     .free_service_pic {
         width: 16.0625rem;
+    }
+}
+
+@media (max-width: 1023px) {
+    .offers_container {
+        max-width: 720px;
+    }
+}
+
+@media (max-width: 767px) {
+    .offers {
+        margin-bottom: 0;
+    }
+    .offers_wrapper {
+        padding: 35px 0;
+        position: relative;
+        background-image: url(https://zefir.ru/img/vector/cloud/cloud-mobile.svg);
+        background-size: 100% 130px!important;
+        background-position: center bottom 267px!important;
+    }
+    .offers_wrapper:before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        height: 18.75rem!important;
+    }
+    .offers_container {
+        max-width: calc(100% - 20px);
+    }
+    .offers_inner {
+        padding-bottom: 0!important;
+    }
+    .offers_title {
+        text-align: center;
+        align-items: center;
+        order: 1;
+        line-height: .9;
+    }
+    .offers_picture {
+        margin: 0 auto;
+        border-radius: 20px;
+    }
+    .offers_picture img {
+        order: 0;
+        margin: 10px;
+        max-width: 132px;
+    }
+    .offers_items {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 8px;
+        margin-left: 0;
+        width: 100%;
+        order: 2;
+    }
+    .offers_item {
+        min-height: 80px;
+        padding: .875rem;
+    }
+    .offers_item span {
+        font-size: 32px;
+    }
+    .offers_item p {
+        font-size: 10px;
+    }
+    .offers_item:nth-child(2) p {
+        font-size: 14px;
+    }
+    .free_service_inner {
+        margin-bottom: 0;
+        flex-direction: column;
+    }
+    .free_service_col:first-child {
+        order: 1;
+        margin-top: 1.5rem!important;
+    }
+    .free_service_col:last-child {
+        order: 0;
+        margin-left: 0;
+        margin-top: 2.375rem!important;
+    }
+    .free_service_title {
+        margin-bottom: 1rem;
+        align-items: flex-start!important;
+        line-height: .9;
+    }
+    .free_service_subtitle {
+        text-align: left!important;
+        font-size: 16px;
+    }
+    .free_service_col button {
+        max-width: 100%;
+        margin-top: 2rem;
+    }
+    .free_service_pic {
+        max-width: 170px;
+        margin: 0 auto;
     }
 }
