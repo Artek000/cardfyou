@@ -1,18 +1,17 @@
 import './css/App.css';
-import Header from "./components/header";
-import BigInfo from "./components/bigInfo";
-import Calculator from "./components/calculator";
-import Partners from "./components/partners";
-import Offers from "./components/offers";
+import {Route, Routes} from "react-router-dom";
+import Home from "./components/main/Home";
+import Cards from "./components/main/Cards";
+import Credits from "./components/main/Credits";
 
 function App() {
     return(
         <div>
-            <Header/>
-            <BigInfo/>
-            <Partners/>
-            <Calculator/>
-            <Offers/>
+            <Routes>
+                <Route path="/" element={<Home/>} />
+                <Route path="/credit_cards" element={<Cards/>} />
+                <Route path="/credits" element={<Credits/>} />
+            </Routes>
         </div>
     );
 }

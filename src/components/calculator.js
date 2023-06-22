@@ -1,12 +1,12 @@
 import AppCalculator from "./appCalculator";
 import '../css/calculator.css';
 
-function Calculator() {
+function Calculator(props) {
     return(
         <div className="calculator_wrapper">
             <div className="calculator_content container">
                 <div className="calculator_title">
-                    <h2>Рассчитаем и подберем для вас <span>лучшее предложение</span></h2>
+                    <h2>{props.title}</h2>
                 </div>
                 <div className="calculator_app">
                     <AppCalculator/>
